@@ -1,0 +1,14 @@
+a.CusButton button{
+    padding: 15px 40px;
+    background-color: var(--ColorTheme);
+    font-weight: 700;
+    color: var(--WhiteColor);
+    border: 2px solid var(--WhiteColor);
+    font-size: 95%;
+}
+
+@media only screen and (max-width: 840px){
+    a.CusButton button{
+        transform: scale(0.7) translateX(-20%);
+    }
+}

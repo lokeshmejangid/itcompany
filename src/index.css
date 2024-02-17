@@ -1,13 +1,50 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  --ColorTheme: rgb(21, 34, 56);
+  --WhiteColor: #fff;
+  --BlackColor: #000;
+  --ShadowColor: rgba(0, 0, 0, 0.25);
+  --LightTextColor: #757575;
+  --ColorThemeTransparent: rgba(21, 34, 56, 0.7)
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+@font-face {
+  font-family: WhisperFont;
+  src: url('./assets/font/Whisper-Regular.ttf');
+}
+
+@font-face {
+  font-family: RegularFont;
+  src: url('./assets/font/Lato-Regular.ttf');
+}
+
+@font-face {
+  font-family: LightFont;
+  src: url('./assets/font/Lato-Light.ttf');
+}
+
+@font-face {
+  font-family: BoldFont;
+  src: url('./assets/font/Lato-Bold.ttf');
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: RegularFont;
+  letter-spacing: 1px;
+}
+
+body {
+  font-size: 16px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+::selection{
+  color: var(--WhiteColor);
+  background-color: var(--ColorTheme);
 }

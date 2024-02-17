@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "h2": "CodeExceptional Solutions",
+        "p": "Tailored tech services for businesses and individuals, driving innovation and transformation.",
+        "img": "./image/bannerImages/1.webp"
+    },
+    {
+        "id": 2,
+        "h2": "CodeExceptional Institute",
+        "p": "Empowering individuals with expert IT coaching for career advancement and success.",
+        "img": "./image/bannerImages/2.jpg"
+    }
+]

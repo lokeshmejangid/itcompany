@@ -1,0 +1,256 @@
+.fristHeader {
+    height: 40px;
+    background-color: var(--ColorTheme);
+    position: relative;
+    z-index: 999;
+}
+
+.fristHeader>div>div {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    font-weight: 700;
+    font-size: 80%;
+    color: var(--WhiteColor);
+    opacity: 0.9;
+}
+
+.fristHeader>div>div>svg {
+    font-size: 150%;
+    padding: 0px 5px 0px 0px;
+}
+
+.mainHeader{
+    box-sizing: content-box;
+    min-height: 60px;
+    padding: 15px 0px;
+    max-height: 120px;
+    box-shadow: 0px 5px 10px -6px var(--ShadowColor);
+    position: relative;
+    z-index: 999;
+}
+
+.mainHeader .logo{
+    height: 80px;
+    position: relative;
+}
+.mainHeader .logo a img{
+    box-sizing: content-box;
+    height: 100%;
+    background-color: var(--WhiteColor);
+}
+
+.mainHeader .NavBar{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mainHeader .NavBar .NavMenu{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mainHeader .NavBar .NavMenu a{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--BlackColor);
+    font-size: 80%;
+    text-transform: uppercase;
+}
+
+.mainHeader .NavBar .NavMenu a.active{
+    color: var(--ColorTheme) !important;
+}
+
+.Toggle{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    position: relative;
+    display: none;
+}
+
+.Toggle div{
+    height: 40px;
+    width: 5px;
+    border-radius: 10px;
+    background-color: var(--ColorTheme);
+    transform: rotateZ(90deg) translateX(-0px);
+    position: absolute;
+    transition: 0.5s;
+}
+
+.Toggle div:nth-child(1){
+    transform: rotateZ(90deg) translateX(-10px);
+}
+
+.Toggle div:last-child{
+    transform: rotateZ(90deg) translateX(10px);
+}
+
+
+.ToggleActive div:last-child{
+    transform: rotateZ(-45deg);
+}
+
+.ToggleActive div:nth-child(2){
+    opacity: 0;
+}
+
+
+.ToggleActive div:first-child{
+    transform: rotateZ(45deg);
+}
+
+@media only screen and (max-width: 600px){
+
+    .fristHeader{
+        height: 60px;
+    }
+
+    .fristHeader>div>div{
+        display: flex;
+        justify-content: end;
+        height: 50%;
+    }
+
+    .mainHeader{
+        padding: 5px 0px;
+    }
+
+    .mainHeader .logo a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .mainHeader .logo a img {
+        top: 0;
+        left: 0;
+        padding: 0;
+        box-shadow: none;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 10px 0px;
+    }
+
+    .mainHeader .NavBar{
+        justify-content: end;
+        align-items: center;
+    }
+
+    .Toggle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35px;
+        width: 35px;
+
+    }
+    .Toggle>div{
+        top: 0;
+        height: 35px;
+        width: 4px;
+    }
+    .mainHeader .NavBar .NavMenu{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        top: 75px;
+        right: 8%;
+        align-items: start;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 0px 15px;
+        row-gap: 15px;
+        height: 0px;
+        overflow: hidden;
+        transition: 0.5s;
+        box-shadow: 0px 0px 10px -2px var(--ShadowColor);
+        background-color: var(--WhiteColor);
+    }
+
+    .mainHeader .NavBar .ListActive{
+        display: block;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .mainHeader .NavBar .NavMenu{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 300px){
+
+    .mainHeader .NavBar .ListActive{
+        width: 40%;
+        height: 150px;
+    }
+    .mainHeader .NavBar .ListActive a{
+        font-size: 60%;
+    }
+    .mainHeader .NavBar .NavMenu a{
+        font-size: 60%;
+    }
+    .mainHeader .logo a img{
+        padding: 10px 0px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px){
+    .mainHeader .NavBar .NavMenu{
+        gap: 10px;
+    }
+    .mainHeader .NavBar .NavMenu a{
+        font-size: 70%;
+    }
+    .mainHeader .logo a img{
+        padding: 0px;
+    }
+}
+
+
+
+@media only screen and (width: 600px){
+    .fristHeader{
+        height: 40px;
+    }
+    .fristHeader>div>div {
+        height: 100%;
+        align-items: center;
+        display: flex;
+        font-weight: 700;
+        font-size: 80%;
+        color: var(--WhiteColor);
+        opacity: 0.9;
+    }
+}
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 700px){
+    .fristHeader>div>div{
+        font-size: 70%;
+    }
+}

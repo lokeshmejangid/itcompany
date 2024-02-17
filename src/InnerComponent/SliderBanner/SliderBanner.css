@@ -1,0 +1,184 @@
+.Slider {
+    min-height: 35pc;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 30px 0px;
+    position: relative;
+}
+
+.black{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.Slider>div>div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    padding: 6% 0px 0px;
+    z-index: 9;
+}
+
+@keyframes upText {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.Slider>div>div h2 {
+    font-size: 350%;
+    line-height: 60px;
+    color: var(--WhiteColor);
+    text-transform: uppercase;
+    font-family: BoldFont;
+    animation: upText 0.5s;
+}
+
+.Slider>div>div p {
+    transform: translateY(30px);
+    opacity: 0;
+    font-size: 110%;
+    color: var(--WhiteColor);
+    animation-name: upText;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.Slider>div>div .Arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--WhiteColor);
+    font-size: 170%;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.Slider>div>div .Arrow svg {
+    filter: drop-shadow(2px 2px 2px 0px var(--ShadowColor));
+}
+
+.Slider>div>div .Arrow:first-child {
+    left: 0px;
+}
+
+.Slider>div>div .Arrow:last-child {
+    right: 0px;
+}
+
+.Slider:hover>div>div .Arrow:first-child {
+    left: 40px;
+    opacity: 1;
+}
+
+.Slider:hover>div>div .Arrow:last-child {
+    right: 40px;
+    opacity: 1;
+}
+
+
+@media only screen and (max-width: 1203px){
+    .Slider>div>div h2{
+        font-size: 280%;
+    }
+    .Slider>div>div p{
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 970px){
+
+    .Slider {
+        min-height: 23pc;
+    }
+
+    .Slider>div>div h2{
+        font-size: 240%;
+        line-height: unset;
+    }
+    .Slider>div>div p{
+        font-size: 80%;
+    }
+}
+
+@media only screen and (max-width: 840px){
+
+    .Slider {
+        min-height: 18pc;
+    }
+
+    .Slider>div>div h2{
+        font-size: 169%;
+    }
+    .Slider>div>div p{
+        font-size: 70%;
+    }
+    .Slider:hover>div>div .Arrow:first-child{
+        left: 20px;
+    }
+    .Slider:hover>div>div .Arrow:last-child{
+        right: 20px;
+    }
+}
+
+@media only screen and (max-width: 599px){
+
+    .Slider{
+        min-height: 15pc;
+    }
+
+    .Slider>div>div {
+        align-items: center;
+        text-align: center;
+    }
+    .Slider>div>div h2{
+        font-size: 150%;
+    }
+    .Slider>div>div p{
+        font-size: 60%;
+    }
+    .Slider>div>div a button{
+        transform: scale(0.7) translateX(0%);
+    }
+}
+
+@media only screen and (min-width: 260px) and (max-width: 400px){
+
+    .Slider{
+        min-height: 10pc;
+    }
+
+    .Slider>div>div{
+        gap: 10px;
+    }
+
+    .Slider>div>div p{
+        width: 70%;
+        margin: 0px auto;
+    }
+    .Slider:hover>div>div .Arrow:first-child{
+        left: 15px;
+    }
+    .Slider:hover>div>div .Arrow:last-child{
+        right: 15px;
+    }
+}
