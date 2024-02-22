@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Home",
+        "icon": false,
+        "list": ""
+    },
+    {
+        "title": "Company",
+        "icon": false,
+        "list": ""
+    },
+    {
+        "title": "Services",
+        "icon": true,
+        "list": [
+            "Services",
+            "Services Details"
+        ]
+    },
+    {
+        "title": "Pages",
+        "icon": true,
+        "list": [
+            "Portfolio",
+            "Portfolio Details",
+            "Team",
+            "Team Details",
+            "404"
+        ]
+    },
+    {
+        "title": "Blog",
+        "icon": true,
+        "list": [
+            "Blog",
+            "Blog Details"
+        ]
+    },
+    {
+        "title": "Contact",
+        "icon": false,
+        "list": ""
+    }
+]

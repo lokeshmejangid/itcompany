@@ -1,18 +1,8 @@
-import React, { useEffect, useState } from 'react';
-// import SliderBannerArr from '../../Utils/SliderBanner.json'
-import SliderBanner from '../../InnerComponent/SliderBanner/SliderBanner';
-import { withNavigation } from 'react-awesome-slider/dist/navigation';
-
+import React from 'react'
 
 const Home = () => {
-  // const MySliderWithNavigation = withNavigation(SliderBanner);
-
-
   return (
-    <>
-     {/* <MySliderWithNavigation /> */}
-     <SliderBanner />
-    </>
+    <div>Home</div>
   )
 }
 

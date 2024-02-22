@@ -1,5 +1,6 @@
 :root{
-  --ColorTheme: rgb(21, 34, 56);
+  --LightThemeColor: #05dac3;
+  --DarkThemeColor: #020626;
   --WhiteColor: #fff;
   --BlackColor: #000;
   --ShadowColor: rgba(0, 0, 0, 0.25);
@@ -9,35 +10,46 @@
 
 
 @font-face {
-  font-family: WhisperFont;
-  src: url('./assets/font/Whisper-Regular.ttf');
+  font-family: thin;
+  src: url('./assets/font/Roboto-Thin.otf');
 }
 
 @font-face {
-  font-family: RegularFont;
-  src: url('./assets/font/Lato-Regular.ttf');
+  font-family: light;
+  src: url('./assets/font/Roboto-Light.otf');
 }
 
 @font-face {
-  font-family: LightFont;
-  src: url('./assets/font/Lato-Light.ttf');
+  font-family: regular;
+  src: url('./assets/font/Roboto-Regular.otf');
 }
 
 @font-face {
-  font-family: BoldFont;
-  src: url('./assets/font/Lato-Bold.ttf');
+  font-family: medium;
+  src: url('./assets/font/Roboto-Medium.otf');
+}
+
+@font-face {
+  font-family: bold;
+  src: url('./assets/font/Roboto-Bold.otf');
+}
+
+@font-face {
+  font-family: black;
+  src: url('./assets/font/Roboto-Black.otf');
 }
 
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  font-family: RegularFont;
+  font-family: regular;
   letter-spacing: 1px;
 }
 
 body {
   font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 html{

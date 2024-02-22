@@ -1,256 +1,255 @@
 .fristHeader {
-    height: 40px;
-    background-color: var(--ColorTheme);
-    position: relative;
-    z-index: 999;
+    background-color: var(--DarkThemeColor);
+    color: #fff;
+    padding: 30px 40px;
 }
 
-.fristHeader>div>div {
-    height: 100%;
-    align-items: center;
+.fristHeaderLeft {
     display: flex;
-    font-weight: 700;
-    font-size: 80%;
-    color: var(--WhiteColor);
-    opacity: 0.9;
-}
-
-.fristHeader>div>div>svg {
-    font-size: 150%;
-    padding: 0px 5px 0px 0px;
-}
-
-.mainHeader{
-    box-sizing: content-box;
-    min-height: 60px;
-    padding: 15px 0px;
-    max-height: 120px;
-    box-shadow: 0px 5px 10px -6px var(--ShadowColor);
-    position: relative;
-    z-index: 999;
-}
-
-.mainHeader .logo{
-    height: 80px;
-    position: relative;
-}
-.mainHeader .logo a img{
-    box-sizing: content-box;
-    height: 100%;
-    background-color: var(--WhiteColor);
-}
-
-.mainHeader .NavBar{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
     align-items: center;
-}
-
-.mainHeader .NavBar .NavMenu{
+    align-content: center;
     height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    gap: 15px;
 }
 
-.mainHeader .NavBar .NavMenu a{
-    text-decoration: none;
-    font-weight: 700;
-    color: var(--BlackColor);
-    font-size: 80%;
+.fristHeaderLeft button {
+    padding: 3px 10px;
     text-transform: uppercase;
+    border: none;
+    background-color: var(--LightThemeColor);
+    color: var(--WhiteColor);
+
 }
 
-.mainHeader .NavBar .NavMenu a.active{
-    color: var(--ColorTheme) !important;
+.fristHeaderLeft>p,
+.fristHeaderLeft>a {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    color: var(--WhiteColor);
+    font-size: 88%;
 }
 
-.Toggle{
-    height: 40px;
-    width: 40px;
+.fristHeaderLeft>p>a {
+    color: var(--WhiteColor);
+    padding-left: 5px;
+}
+
+.fristHeaderLeft>a {
+    border-left: 1.5px solid rgba(255, 255, 255, 0.2);
+    height: 18px;
+    text-decoration: none;
+}
+
+.fristHeaderLeft>a>svg {
+    font-size: 120%;
+    color: var(--LightThemeColor);
+    padding: 0px 5px;
+    box-sizing: content-box;
+}
+
+.fristHeaderRight {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    width: 80%;
+}
+
+.fristHeaderRight img {
+    width: 25px;
+    border-radius: 50%;
+}
+
+.fristHeaderRight p {
+    font-size: 80%;
+    display: flex;
+    align-items: start;
+    transition: 0.3s;
+}
+
+.fristHeaderRight:hover p {
+    color: var(--LightThemeColor);
+}
+
+.fristHeaderRight ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 150%;
+    background-color: var(--WhiteColor);
+    color: var(--BlackColor);
+    list-style: none;
+    padding: 25px 20px;
+    height: auto;
+    width: 90px;
+    box-shadow: 1px 1px 5px 1px var(--ShadowColor);
+    right: -20px;
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+    font-size: 80%;
+    gap: 5px;
+}
+
+.fristHeaderRight:hover ul {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 100%;
+}
+
+.mainHeader {
+    height: 100px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.mainHeader>div {
+    height: 100%;
+}
+
+.headerLogo {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
-    background-color: transparent;
-    outline: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 12%;
+}
+
+.headerLogo img {
+    width: 70%;
+}
+
+.navLinksBox {
     position: relative;
-    display: none;
+    height: 100%;
 }
 
-.Toggle div{
-    height: 40px;
-    width: 5px;
-    border-radius: 10px;
-    background-color: var(--ColorTheme);
-    transform: rotateZ(90deg) translateX(-0px);
+.navLinksBox::before {
+    content: '';
     position: absolute;
-    transition: 0.5s;
+    top: 0;
+    left: 0;
+    width: 102%;
+    height: 100%;
+    background-color: var(--LightThemeColor);
+    transform: scale(0.9) translate(-1%, 12%);
 }
 
-.Toggle div:nth-child(1){
-    transform: rotateZ(90deg) translateX(-10px);
+.navLinks {
+    height: 100%;
+    width: 100%;
+    background-color: var(--WhiteColor);
+    transform: scale(0.9);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.Toggle div:last-child{
-    transform: rotateZ(90deg) translateX(10px);
+.navLinks>ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding-left: 8%;
+    height: 100%;
 }
 
-
-.ToggleActive div:last-child{
-    transform: rotateZ(-45deg);
+.navLinks>ul>li {
+    height: 100%;
+    position: relative;
 }
 
-.ToggleActive div:nth-child(2){
+.navLinks>ul>li>a {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    text-decoration: none;
+    color: var(--BlackColor);
+    font-size: 105%;
+    height: 100%;
+}
+
+.navLinks>svg {
+    font-size: 200%;
+}
+
+.navLinks>ul>li>a>svg {
+    font-size: 90%;
+    color: var(--LightThemeColor);
+}
+
+.navLinks>ul>li>ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--WhiteColor);
+    padding: 20px 30px;
+    width: 220px;
+    list-style: none;
+    transform: rotateX(50deg);
+    transform-origin: top;
     opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
 }
 
-
-.ToggleActive div:first-child{
-    transform: rotateZ(45deg);
+.navLinks>ul>li:hover>ul{
+    opacity: 1;
+    visibility: visible;
+    transform: rotateX(0deg);
 }
 
-@media only screen and (max-width: 600px){
+.navLinks>ul>li>ul>li {
+    font-size: 90%;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
+}
 
-    .fristHeader{
-        height: 60px;
-    }
+.navLinks>ul>li>ul>li:last-child {
+    border-bottom: none;
+}
 
-    .fristHeader>div>div{
-        display: flex;
-        justify-content: end;
-        height: 50%;
-    }
+.navLinks>ul>li>ul>li>a {
+    text-decoration: none;
+    position: relative;
+    padding-left: 0px;
+    transition: 0.3s;
+    display: block;
+    padding: 10px 0px;
+    width: 100%;
+}
 
-    .mainHeader{
-        padding: 5px 0px;
-    }
+.navLinks>ul>li>ul>li>a::before{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background-color: var(--LightThemeColor);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
 
-    .mainHeader .logo a{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: left;
-        align-items: center;
-    }
+.navLinks>ul>li>ul>li:hover a{
+    padding-left: 15px;
+}
 
-    .mainHeader .logo a img {
-        top: 0;
-        left: 0;
-        padding: 0;
-        box-shadow: none;
-        height: 100%;
-        box-sizing: border-box;
-        padding: 10px 0px;
-    }
+.navLinks>ul>li>ul>li:hover a::before{
+    width: 10px;
+}
 
-    .mainHeader .NavBar{
-        justify-content: end;
-        align-items: center;
-    }
-
-    .Toggle{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 35px;
-        width: 35px;
-
-    }
-    .Toggle>div{
-        top: 0;
-        height: 35px;
-        width: 4px;
-    }
-    .mainHeader .NavBar .NavMenu{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: 30%;
-        top: 75px;
-        right: 8%;
-        align-items: start;
-        justify-content: center;
-        box-sizing: border-box;
-        padding: 0px 15px;
-        row-gap: 15px;
-        height: 0px;
-        overflow: hidden;
-        transition: 0.5s;
-        box-shadow: 0px 0px 10px -2px var(--ShadowColor);
-        background-color: var(--WhiteColor);
-    }
-
-    .mainHeader .NavBar .ListActive{
-        display: block;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: center;
-        box-sizing: border-box;
+@media only screen and (max-width: 1100px) {
+    .fristHeader {
+        font-size: 14px;
     }
 }
 
-@media only screen and (max-width: 400px){
-    .mainHeader .NavBar .NavMenu{
-        width: 40%;
-    }
-}
-
-@media only screen and (max-width: 300px){
-
-    .mainHeader .NavBar .ListActive{
-        width: 40%;
-        height: 150px;
-    }
-    .mainHeader .NavBar .ListActive a{
-        font-size: 60%;
-    }
-    .mainHeader .NavBar .NavMenu a{
-        font-size: 60%;
-    }
-    .mainHeader .logo a img{
-        padding: 10px 0px;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 800px){
-    .mainHeader .NavBar .NavMenu{
-        gap: 10px;
-    }
-    .mainHeader .NavBar .NavMenu a{
-        font-size: 70%;
-    }
-    .mainHeader .logo a img{
-        padding: 0px;
-    }
-}
-
-
-
-@media only screen and (width: 600px){
-    .fristHeader{
-        height: 40px;
-    }
-    .fristHeader>div>div {
-        height: 100%;
-        align-items: center;
-        display: flex;
-        font-weight: 700;
-        font-size: 80%;
-        color: var(--WhiteColor);
-        opacity: 0.9;
-    }
-}
-
-
-
-@media only screen and (min-width: 600px) and (max-width: 700px){
-    .fristHeader>div>div{
-        font-size: 70%;
+@media only screen and (max-width: 1000px) {
+    .fristHeader {
+        display: none !important;
     }
 }
