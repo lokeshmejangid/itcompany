@@ -5,7 +5,8 @@
   --BlackColor: #000;
   --ShadowColor: rgba(0, 0, 0, 0.25);
   --LightTextColor: #757575;
-  --ColorThemeTransparent: rgba(21, 34, 56, 0.7)
+  --ColorThemeTransparent: rgba(21, 34, 56, 0.7);
+  --LightWhiteColor: #f5f5f5;
 }
 
 
@@ -47,9 +48,15 @@
   letter-spacing: 1px;
 }
 
+a{
+  color: var(--BlackColor);
+  text-decoration: none;
+}
+
 body {
   font-size: 16px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVzaW5lc3MlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww') no-repeat;
+  background-size: cover;
 }
 
 html{
@@ -58,5 +65,5 @@ html{
 
 ::selection{
   color: var(--WhiteColor);
-  background-color: var(--ColorTheme);
+  background-color: var(--BlackColor);
 }

@@ -1,0 +1,20 @@
+[
+    {
+        "img": "",
+        "title": "USD",
+        "list": [
+            "EUR",
+            "AFN",
+            "XCD"
+        ]
+    },
+    {
+        "img": "https://e7.pngegg.com/pngimages/1020/23/png-clipart-logo-primera-air-organization-business-english-language-british-flag-flag-logo.png",
+        "title": "English",
+        "list": [
+            "Spanish",
+            "English",
+            "Canada"
+        ]
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "url": "./image/GalleryImg/1.webp"
+    },
+    {
+        "id": 2,
+        "url": "./image/GalleryImg/2.webp"
+    },
+    {
+        "id": 3,
+        "url": "./image/GalleryImg/3.webp"
+    },
+    {
+        "id": 4,
+        "url": "./image/GalleryImg/4.webp"
+    },
+    {
+        "id": 5,
+        "url": "./image/GalleryImg/5.webp"
+    },
+    {
+        "id": 6,
+        "url": "./image/GalleryImg/6.webp"
+    }
+]

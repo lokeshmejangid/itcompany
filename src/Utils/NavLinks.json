@@ -1,15 +1,18 @@
 [
     {
+        "id": 1,
         "title": "Home",
         "icon": false,
         "list": ""
     },
     {
+        "id": 2,
         "title": "Company",
         "icon": false,
         "list": ""
     },
     {
+        "id": 3,
         "title": "Services",
         "icon": true,
         "list": [
@@ -18,6 +21,7 @@
         ]
     },
     {
+        "id": 4,
         "title": "Pages",
         "icon": true,
         "list": [
@@ -29,6 +33,7 @@
         ]
     },
     {
+        "id": 5,
         "title": "Blog",
         "icon": true,
         "list": [
@@ -37,6 +42,7 @@
         ]
     },
     {
+        "id": 6,
         "title": "Contact",
         "icon": false,
         "list": ""
