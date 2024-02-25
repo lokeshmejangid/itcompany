@@ -33,7 +33,7 @@
 .fristHeaderLeft>p>a {
     color: var(--WhiteColor);
     padding-left: 5px;
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 .fristHeaderLeft>a {
@@ -79,7 +79,6 @@
     flex-direction: column;
     top: 150%;
     background-color: var(--WhiteColor);
-    list-style: none;
     padding: 25px 20px;
     height: auto;
     width: 90px;
@@ -92,7 +91,7 @@
     gap: 5px;
 }
 
-.fristHeaderRight ul li{
+.fristHeaderRight ul li {
     color: var(--BlackColor);
     cursor: pointer;
 }
@@ -150,23 +149,23 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .navLinks>ul {
     display: flex;
-    list-style: none;
     gap: 20px;
-    padding-left: 8%;
     height: 100%;
 }
 
-.navLinks>ul>li {
+.navLinks>ul>li,
+.sideBarNavLinks>ul>li {
     height: 100%;
     position: relative;
 }
 
-.navLinks>ul>li>a {
+.navLinks>ul>li>a,
+.sideBarNavLinks>ul>li>a {
     display: flex;
     align-items: center;
     gap: 3px;
@@ -191,7 +190,6 @@
     background-color: var(--WhiteColor);
     padding: 20px 30px;
     width: 220px;
-    list-style: none;
     transform: rotateX(50deg);
     transform-origin: top;
     opacity: 0;
@@ -246,6 +244,7 @@
 .toggle {
     width: 100%;
     height: 100%;
+    max-width: 110px;
     background-color: var(--LightThemeColor);
     display: flex;
     justify-content: center;
@@ -254,6 +253,7 @@
     gap: 7px;
     font-size: 16px;
     cursor: pointer;
+    float: right;
 }
 
 .toggle .toggleLines {
@@ -276,7 +276,7 @@
     width: 30%;
 }
 
-.bgBlackClrEffect{
+.bgBlackClrEffect {
     transition: 0.5s;
     position: fixed;
     top: 0;
@@ -286,14 +286,17 @@
     background-color: rgba(0, 0, 0, 1);
     visibility: hidden;
     opacity: 0;
+    z-index: 9998;
+    cursor: auto;
 }
 
-.ActiveBgBlackClrEffect{
+.ActiveBgBlackClrEffect {
     visibility: visible;
     opacity: 0.4;
+    cursor: url('../../../public/image/cursorImg/close.png'), auto;
 }
 
-.toggleSideBar{
+.toggleSideBar {
     position: fixed;
     width: 30%;
     background-color: var(--WhiteColor);
@@ -305,21 +308,25 @@
     z-index: 9999;
     transform: translateX(100%);
     transition: 0.5s;
+    cursor: auto;
 }
 
-.activeToggleSideBar{
+.activeToggleSideBar {
     transform: translateX(0%);
 }
 
-.toggleSideBar::-webkit-scrollbar{
+.toggleSideBar::-webkit-scrollbar {
     display: none;
 }
 
-.toggleSideBar .sideBarLogo{
+.toggleSideBar .sideBarLogo {
     width: 90%;
 }
 
-.toggleSideBar .toggleClose{
+.toggleSideBar .toggleClose,
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderClose,
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderLeft,
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderRight {
     background-color: var(--LightWhiteColor);
     width: 40px;
     height: 40px;
@@ -330,40 +337,113 @@
     cursor: pointer;
 }
 
-.toggleSideBar .toggleClose svg{
+.toggleSideBar .toggleClose svg,
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderClose svg {
     transition: 0.3s;
 }
 
-.toggleSideBar .toggleClose:hover svg{
+.toggleSideBar .toggleClose:hover svg,
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderClose:hover svg {
     transform: rotateZ(45deg);
 }
 
-.toggleSideBar p{
+.toggleSideBar p {
     color: var(--LightTextColor);
     font-size: 90%;
-    padding-top: 40px;
+    padding-top: 10px;
     line-height: 25px;
 }
 
-.toggleSideBar h2{
+.toggleSideBar h2 {
     padding-top: 30px;
     font-size: 160%;
     padding-bottom: 10px;
 }
 
-.sideBarGalleryImg img{
+.sideBarGalleryImg img {
     width: 100%;
 }
 
-.sideBarContact ul.sideBarContactText{
-    list-style: none;
+.sideBarGalleryImgSlider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.activeSideBarGalleryImgSlider {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderClose,
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderLeft,
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderRight {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderClose svg,
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderLeft svg,
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderRight svg {
+    font-size: 200%;
+}
+
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderClose {
+    top: 0;
+    right: 0;
+}
+
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderLeft {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderRight {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 60vh;
+    max-width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sideBarGalleryImgSlider .sideBarGalleryImgSliderImg img {
+    height: 100%;
+    max-width: 100%;
+}
+
+.sideBarGalleryImg img {
+    cursor: pointer;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.sideBarContact ul.sideBarContactText {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-top: 10px;
 }
 
-.sideBarContact ul.sideBarContactText li a{
+.sideBarContact ul.sideBarContactText li a {
     display: flex;
     align-items: center;
     font-size: 100%;
@@ -371,19 +451,18 @@
     gap: 10px;
 }
 
-.sideBarContact ul.sideBarContactText li a svg{
+.sideBarContact ul.sideBarContactText li a svg {
     font-size: 120%;
     color: var(--LightThemeColor);
 }
 
-.sideBarContact ul.sideBarContactLogos{
+.sideBarContact ul.sideBarContactLogos {
     display: flex;
-    list-style: none;
     gap: 5px;
     padding-top: 30px;
 }
 
-.sideBarContact ul.sideBarContactLogos li a{
+.sideBarContact ul.sideBarContactLogos li a {
     height: 40px;
     width: 40px;
     display: flex;
@@ -393,12 +472,76 @@
     color: var(--WhiteColor);
 }
 
-.sideBarContact ul.sideBarContactLogos li a:hover{
+.sideBarContact ul.sideBarContactLogos li a:hover {
     transform: translateY(-15%);
 }
 
-.sideBarContact ul.sideBarContactLogos li a svg{
+.sideBarContact ul.sideBarContactLogos li a svg {
     font-size: 120%;
+}
+
+.sideBarNavLinks {
+    display: none;
+    flex-direction: column;
+}
+
+.sideBarNavLinks>ul {
+    padding: 30px 0px;
+}
+
+.sideBarNavLinks ul li {
+    padding: 10px 0px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+.sideBarNavLinks>ul>li {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.sideBarNavLinks>ul>li>a {
+    width: 60%;
+    padding: 10px 0px;
+}
+
+.sideBarNavLinks>ul>li>svg {
+    color: var(--LightThemeColor);
+    font-size: 120%;
+    background-color: var(--LightWhiteColor);
+    padding: 10px;
+    box-sizing: content-box;
+    cursor: pointer;
+}
+
+.sideBarNavLinks ul li:last-child {
+    border: none;
+}
+
+.sideBarNavLinks>ul>li:last-child {
+    padding-bottom: 0px;
+}
+
+.sideBarNavLinks>ul>li>ul {
+    width: 100%;
+    transition: 0.5s !important;
+    transform: rotateX(90deg);
+    transform-origin: top;
+    height: 0px;
+}
+
+.sideBarNavLinks>ul>li>ul.activeSubNavLinks {
+    height: 100%;
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+}
+
+.sideBarNavLinks>ul>li>ul>li {
+    font-size: 85%;
 }
 
 
@@ -411,5 +554,39 @@
 @media only screen and (max-width: 1000px) {
     .fristHeader {
         display: none !important;
+    }
+
+    .navLinksBox {
+        display: none;
+    }
+
+    .sideBarNavLinks {
+        display: flex;
+    }
+
+    .toggleSideBar {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .mainHeader{
+        height: 70px;
+    }
+    .headerLogo img {
+        width: 70%;
+    }
+    .toggle {
+        max-width: 70px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .headerLogo img {
+        width: 100%;
+    }
+    .toggleSideBar{
+        font-size: 14px;
     }
 }

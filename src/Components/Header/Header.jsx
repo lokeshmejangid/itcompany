@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material'
 import React, { useState } from 'react'
 import './Header.css'
-import { ArrowDownward, Call, Close, Facebook, KeyboardArrowDown, LinkedIn, Mail, Place, Search, Twitter, YouTube } from '@mui/icons-material'
+import { ArrowDownward, ArrowLeft, Call, Close, Facebook, KeyboardArrowDown, KeyboardArrowLeft, KeyboardArrowRight, LinkedIn, Mail, Place, Search, Tune, Twitter, YouTube } from '@mui/icons-material'
 import legArr from '../../Utils/leg.json'
 import navLinksArr from '../../Utils/NavLinks.json'
 import { NavLink } from 'react-router-dom'
@@ -11,9 +11,27 @@ import { contactArr } from '../../Utils/Contact'
 const Header = () => {
 
   const [toggle, setToggle] = useState(false);
+  const [countGallerySliderImg, setCountGallerySliderImg] = useState(0);
+  const [gallerySlider, setGallerySlider] = useState(false);
+  const [sideBarNavLinks, setSideBarNavLinks] = useState(false);
 
   const activeToggle = () => setToggle(true);
   const disActiveToggle = () => setToggle(false);
+
+  const showSideBarNavLinks = () => sideBarNavLinks === false ? setSideBarNavLinks(true) : setSideBarNavLinks(false);
+
+  const activeGallerySlider = (img) => {
+    setGallerySlider(true)
+    setCountGallerySliderImg(img)
+  };
+  const disActiveGallerySlider = () => setGallerySlider(false);
+
+  const rightGallerySliderImg = () =>
+    countGallerySliderImg === galleryImgArr.length - 1 ? setCountGallerySliderImg(0) : setCountGallerySliderImg(countGallerySliderImg + 1);
+
+  const leftGallerySliderImg = () =>
+    countGallerySliderImg === 0 ? setCountGallerySliderImg(galleryImgArr.length - 1) : setCountGallerySliderImg(countGallerySliderImg - 1);
+
 
   return (
     <>
@@ -35,8 +53,8 @@ const Header = () => {
             </Grid>)}
         </Grid>
       </Grid>
-      <Grid container spacing={0} className='mainHeader'>
-        <Grid item md={2}>
+      <Grid container spacing={0} className='mainHeader' justifyContent='space-between'>
+        <Grid item xs={5} sm={4} md={2}>
           <div className="headerLogo">
             <img src="./image/logo.webp" alt="" />
           </div>
@@ -55,26 +73,40 @@ const Header = () => {
                   </ul> : ''}
                 </li>)}
               </ul>
-              <Search />
             </div>
           </div>
         </Grid>
-        <Grid item md={2} container spacing={0} justifyContent='end'>
-          <Grid item md={6}>
+        <Grid item xs={7} sm={4} md={2} container spacing={0} justifyContent='end'>
+          <Grid item xs={12} md={6}>
             <div className="toggle" onClick={activeToggle}>
               <div className="toggleLines"></div>
               <div className="toggleLines"></div>
               <div className="toggleLines"></div>
             </div>
-            <div className={` bgBlackClrEffect ${toggle === true ? "ActiveBgBlackClrEffect" : ''}`}></div>
+            <div className={` bgBlackClrEffect ${toggle === true ? "ActiveBgBlackClrEffect" : ''}`} onClick={disActiveToggle}></div>
             <div className={`toggleSideBar ${toggle === true ? 'activeToggleSideBar' : ''}`}>
               <Grid container spacing={0} justifyContent='space-between' alignItems='center'>
-                <Grid item xs={6}>
+                <Grid item xs={7} sm={3} md={6}>
                   <img className='sideBarLogo' src="./image/blackTextLogo.webp" alt="" />
                 </Grid>
                 <Grid item xs={3}>
                   <div className="toggleClose" onClick={disActiveToggle}>
                     <Close />
+                  </div>
+                </Grid>
+                <Grid item xs={12}>
+                  <div className="sideBarNavLinks">
+                    <ul>
+                      {navLinksArr.map((value, index) => <li key={index}>
+                        <NavLink>
+                          {value.title}
+                        </NavLink>
+                        {value.icon === true ? <ArrowDownward onClick={showSideBarNavLinks} /> : ''}
+                        {value.icon === true ? <ul className={sideBarNavLinks === true ? 'activeSubNavLinks' : ''}>
+                          {value.list.map((val, ind) => <li key={ind}><NavLink>{val}</NavLink></li>)}
+                        </ul> : ''}
+                      </li>)}
+                    </ul>
                   </div>
                 </Grid>
                 <Grid item xs={12}>
@@ -85,8 +117,8 @@ const Header = () => {
                 </Grid>
                 <Grid item xs={12} container spacing={1} className='sideBarGalleryImg'>
                   {galleryImgArr.map((value, index) =>
-                    <Grid item xs={4} key={index}>
-                      <img src={value.url} alt="" />
+                    <Grid item xs={4} sm={3} md={4} key={index}>
+                      <img src={value.url} alt="" onClick={() => activeGallerySlider(index)} />
                     </Grid>)}
                 </Grid>
                 <Grid item xs={12}>
@@ -105,6 +137,23 @@ const Header = () => {
                   </ul>
                 </Grid>
               </Grid>
+            </div>
+            <div className={`sideBarGalleryImgSlider ${gallerySlider === true ? 'activeSideBarGalleryImgSlider' : ''
+              }`}>
+              <div className="sideBarGalleryImgSliderClose" onClick={disActiveGallerySlider}>
+                <Close />
+              </div>
+              <div className="sideBarGalleryImgSliderLeft" onClick={leftGallerySliderImg}>
+                <KeyboardArrowLeft />
+              </div>
+              <div className="sideBarGalleryImgSliderRight" onClick={rightGallerySliderImg}>
+                <KeyboardArrowRight />
+              </div>
+              <div className={`sideBarGalleryImgSliderImg`}>
+                {galleryImgArr.map((value, index) =>
+                  index === countGallerySliderImg ? <img key={index} src={value.url} alt="" /> : ''
+                )}
+              </div>
             </div>
           </Grid>
         </Grid>
