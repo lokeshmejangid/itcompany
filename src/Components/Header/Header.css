@@ -106,6 +106,7 @@
 .mainHeader {
     height: 100px;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
 }
 
 .mainHeader>div {
@@ -513,6 +514,7 @@
     padding: 10px;
     box-sizing: content-box;
     cursor: pointer;
+    position: relative;
 }
 
 .sideBarNavLinks ul li:last-child {

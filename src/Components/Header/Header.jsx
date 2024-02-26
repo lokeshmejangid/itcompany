@@ -13,12 +13,17 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [countGallerySliderImg, setCountGallerySliderImg] = useState(0);
   const [gallerySlider, setGallerySlider] = useState(false);
-  const [sideBarNavLinks, setSideBarNavLinks] = useState(false);
+  const [sideBarNavLinks, setSideBarNavLinks] = useState('');
 
   const activeToggle = () => setToggle(true);
   const disActiveToggle = () => setToggle(false);
 
-  const showSideBarNavLinks = () => sideBarNavLinks === false ? setSideBarNavLinks(true) : setSideBarNavLinks(false);
+  // const showSideBarNavLinks = () => sideBarNavLinks === false ? setSideBarNavLinks(true) : setSideBarNavLinks(false);
+
+  const showSideBarNavLinks = (e) => {
+    const targetLink = e.target.getAttribute('val');
+    sideBarNavLinks === targetLink ? setSideBarNavLinks('') : setSideBarNavLinks(targetLink)
+  }
 
   const activeGallerySlider = (img) => {
     setGallerySlider(true)
@@ -101,8 +106,8 @@ const Header = () => {
                         <NavLink>
                           {value.title}
                         </NavLink>
-                        {value.icon === true ? <ArrowDownward onClick={showSideBarNavLinks} /> : ''}
-                        {value.icon === true ? <ul className={sideBarNavLinks === true ? 'activeSubNavLinks' : ''}>
+                        {value.icon === true ? <ArrowDownward val={value.title} onClick={(e) => showSideBarNavLinks(e)} /> : ''}
+                        {value.icon === true ? <ul className={sideBarNavLinks === value.title ? 'activeSubNavLinks' : ''}>
                           {value.list.map((val, ind) => <li key={ind}><NavLink>{val}</NavLink></li>)}
                         </ul> : ''}
                       </li>)}
