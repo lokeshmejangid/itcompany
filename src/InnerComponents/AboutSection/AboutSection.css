@@ -1,0 +1,150 @@
+.aboutSection {
+    padding: 120px 30px;
+}
+
+.aboutImgPart {
+    position: relative;
+}
+
+.aboutImgPart img {
+    width: 80%;
+    border-radius: 8px;
+}
+
+.aboutImgPart img.aboutSideImg1 {
+    position: absolute;
+    top: 45px;
+    right: 10%;
+    width: 30%;
+}
+
+.aboutImgPart img.aboutSideImg2 {
+    position: absolute;
+    top: 170px;
+    right: 15%;
+    width: 27%;
+}
+
+
+.aboutVideoPart {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-75px);
+    width: 80%;
+    margin-left: 10%;
+}
+
+.aboutVideoPlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--WhiteColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.aboutVideoPlay::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--WhiteColor);
+    opacity: 0.3;
+    border-radius: 50%;
+    transform: scale(1.3);
+    animation: videoPlayBtnAnimationBulr 1.5s infinite;
+}
+
+@keyframes videoPlayBtnAnimationBulr {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.aboutVideoPlay::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--WhiteColor);
+    opacity: 0.3;
+    border-radius: 50%;
+    transform: scale(1.3);
+    animation: videoPlayBtnAnimation 1.5s infinite;
+}
+
+@keyframes videoPlayBtnAnimation {
+    0% {
+        transform: scale(1.3);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+.aboutVideoPlay svg{
+    color: var(--LightThemeColor);
+    font-size: 220%;
+}
+
+.aboutVideoPart img.videoImg {
+    width: 100%;
+}
+
+.aboutImgPart .awardImg {
+    width: 44%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+}
+
+.aboutImgPart .awardImg img:first-child {
+    width: 100%;
+    animation: rotateAwardBgImg 18s infinite ease-in-out;
+}
+
+@keyframes rotateAwardBgImg {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.aboutImgPart .awardImg img:last-child {
+    position: absolute;
+    width: 100%;
+}
+
+.aboutContantPart>p{
+    padding: 0px 15px;
+    border-left: 2px solid var(--LightThemeColor);
+    font-family: light;
+    font-size: 90%;
+    color: var(--LightTextColor);
+    line-height: 25px;
+    margin: 30px 0px;
+}

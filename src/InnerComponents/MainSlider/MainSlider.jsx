@@ -4,8 +4,8 @@ import { Grid } from '@mui/material'
 
 const MainSlider = () => {
   return (
-    <Grid container spacing={0} style={{background: 'red'}} className='MainSlider'>
-
+    <Grid container spacing={0} className='MainSlider'>
+      <img src="./sliderIm.png" alt="" width="100%"/>
     </Grid>
   )
 }

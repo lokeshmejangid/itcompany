@@ -49,14 +49,14 @@ const Header = () => {
             <a href="mailto:technix@support.com"> <Mail /> technix@support.com</a>
           </div>
         </Grid>
-        <Grid item sm={2} container spacing={2}>
+        {/* <Grid item sm={2} container spacing={2}>
           {legArr.map((value, index) =>
             <Grid item sm={6} className="fristHeaderRight" key={index}>
               {value.img !== '' ? <img src={value.img} /> : ''}
               <p>{value.title}<KeyboardArrowDown /></p>
               <ul>{value.list.map((val, ind) => <li key={ind}>{val}</li>)}</ul>
             </Grid>)}
-        </Grid>
+        </Grid> */}
       </Grid>
       <Grid container spacing={0} className='mainHeader' justifyContent='space-between'>
         <Grid item xs={5} sm={4} md={2}>

@@ -1,0 +1,8 @@
+.mainHeading{
+    font-size: 250%;
+}
+
+.mainHeading span{
+    color: var(--LightThemeColor);
+    font-family: bold;
+}

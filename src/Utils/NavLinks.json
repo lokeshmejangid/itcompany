@@ -14,7 +14,7 @@
     {
         "id": 3,
         "title": "Services",
-        "icon": true,
+        "icon": false,
         "list": [
             "Services",
             "Services Details"
@@ -23,7 +23,7 @@
     {
         "id": 4,
         "title": "Pages",
-        "icon": true,
+        "icon": false,
         "list": [
             "Portfolio",
             "Portfolio Details",
@@ -35,7 +35,7 @@
     {
         "id": 5,
         "title": "Blog",
-        "icon": true,
+        "icon": false,
         "list": [
             "Blog",
             "Blog Details"
