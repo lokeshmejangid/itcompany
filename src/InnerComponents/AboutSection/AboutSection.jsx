@@ -5,6 +5,7 @@ import { PlayArrow, Tune } from '@mui/icons-material'
 import MiniHeading from '../MiniHeading/MiniHeading'
 import MainHeading from '../MainHeading/MainHeading'
 import { CircularProgressbar } from 'react-circular-progressbar'
+import CusBtn from '../CusBtn/CusBtn'
 
 const AboutSection = () => {
     const percentage = 66;
@@ -26,15 +27,44 @@ const AboutSection = () => {
                         <img src="./image/aboutImgPart/awardImg.webp" alt="" />
                     </div>
                 </Grid>
-                <Grid item sm={6} className="aboutContantPart" container spacing={0}>
-                    <MiniHeading frist='about' secound='it solutions' />
-                    <MainHeading f="Best Digital" s="Technology" t="Agency For People" />
-                    <p>Transmax is the world’s driving worldwide coordinations supplier — we uphold industry and exchange the worldwide trade of merchandise through land transport.</p>
-                    <Grid item sm={6}>
-                        <CircularProgressbar
-                            value={percentage}
-                            text={`${percentage}%`}
-                        />;
+                <Grid item sm={6} className="aboutContantPart" container spacing={0} alignContent='start' justifyContent='space-between'>
+                    <Grid item sm={12}>
+                        <MiniHeading frist='about' secound='it solutions' />
+                        <MainHeading addClass='aboutSectionHeading' f="Best Digital" s="Technology" t="Agency For People" />
+                        <p>Transmax is the world’s driving worldwide coordinations supplier — we uphold industry and exchange the worldwide trade of merchandise through land transport.</p>
+                    </Grid>
+                    <Grid item sm={6} container spacing={0} className='aboutProgress'>
+                        <Grid item sm={5}>
+                            <CircularProgressbar
+                                value={percentage}
+                                text={`${percentage}%`}
+                                counterClockwise
+                            />
+                        </Grid>
+                        <Grid item sm={7}>
+                            <h5>Business Strategy Growth</h5>
+                        </Grid>
+                    </Grid>
+                    <Grid item sm={6} container spacing={0} className='aboutProgress'>
+                        <Grid item sm={5}>
+                            <CircularProgressbar
+                                value={percentage}
+                                text={`${percentage}%`}
+                                counterClockwise
+                            />
+                        </Grid>
+                        <Grid item sm={7}>
+                            <h5>Health Valuable Ideas</h5>
+                        </Grid>
+                    </Grid>
+                    <Grid item sm={5}>
+                        <CusBtn text="OUR HISTORY" link="new" arrow={true} />
+                    </Grid>
+                    <Grid item sm={7}>
+                        <div className="aboutDate">
+                            <h6>BRENDON GARREY</h6>
+                            <p>mayor, since 21st Oct , 2019</p>
+                        </div>
                     </Grid>
                 </Grid>
             </Grid>

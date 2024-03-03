@@ -1,0 +1,67 @@
+.CusBtn{
+    padding: 0;
+    border: none;
+    background-color: var(--DarkThemeColor);
+}
+
+.CusBtn a{
+    padding: 23px 30px;
+    color: var(--WhiteColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 120%;
+    position: relative;
+    overflow: hidden;
+}
+
+.CusBtn a::after{
+    content: '';
+    height: 40px;
+    width: 40px;
+    background-color: var(--LightThemeColor);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(40%, 40%);
+    border-radius: 45%;
+}
+
+.CusBtn a::before{
+    content: '';
+    height: 40px;
+    width: 40px;
+    background-color: var(--LightThemeColor);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(40%, 40%) scale(1);
+    border-radius: 45%;
+    transition: 0.5s;
+}
+
+.CusBtn a:hover:before{
+    transform: translate(40%, 40%) scale(10);
+}
+
+.CusBtn a span{
+    font-family: light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    z-index: 99;
+    color: var(--WhiteColor);
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+
+.CusBtn a:hover span{
+    color: var(--DarkThemeColor);
+}
+
+.CusBtn a span svg{
+    font-size: 110%;
+}

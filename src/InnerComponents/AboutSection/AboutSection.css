@@ -139,7 +139,7 @@
     width: 100%;
 }
 
-.aboutContantPart>p{
+.aboutContantPart>div>p{
     padding: 0px 15px;
     border-left: 2px solid var(--LightThemeColor);
     font-family: light;
@@ -147,4 +147,41 @@
     color: var(--LightTextColor);
     line-height: 25px;
     margin: 30px 0px;
+}
+
+.aboutSectionHeading{
+    padding: 20px 0px 10px;
+}
+
+.aboutProgress{
+    padding: 30px 0px;
+}
+
+.aboutProgress>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutProgress h5{
+    font-size: 120%;
+    font-family: light;
+}
+
+.aboutDate{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 25px;
+}
+
+.aboutDate h6{
+    font-size: 95%;
+    font-family: light;
+}
+
+.aboutDate p{
+    font-size: 85%;
+    font-family: light;
+    color: var(--LightTextColor);
 }
