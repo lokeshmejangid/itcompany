@@ -10,7 +10,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     font-size: 120%;
     position: relative;
     overflow: hidden;
@@ -18,8 +17,8 @@
 
 .CusBtn a::after{
     content: '';
-    height: 40px;
-    width: 40px;
+    height: 60%;
+    width: 20%;
     background-color: var(--LightThemeColor);
     position: absolute;
     bottom: 0;
@@ -30,8 +29,8 @@
 
 .CusBtn a::before{
     content: '';
-    height: 40px;
-    width: 40px;
+    height: 60%;
+    width: 20%;
     background-color: var(--LightThemeColor);
     position: absolute;
     bottom: 0;
@@ -42,7 +41,7 @@
 }
 
 .CusBtn a:hover:before{
-    transform: translate(40%, 40%) scale(10);
+    transform: translate(40%, 40%) scale(11);
 }
 
 .CusBtn a span{

@@ -2,12 +2,12 @@ import React from 'react'
 import './MiniHeading.css'
 
 const MiniHeading = (props) => {
-    const {frist, secound} = props;
+    const {frist, secound, addClass} = props;
     return (
-        <div className='miniHeading'>
+        <div className={`miniHeading ${addClass || ''}`}>
             <p>
-                {frist}
-                <span> {secound}</span>
+                {frist || ''}
+                <span> {secound || 'it solutions'}</span>
             </p>
             <div></div>
         </div>

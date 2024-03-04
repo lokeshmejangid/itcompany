@@ -13,14 +13,14 @@
 
 .aboutImgPart img.aboutSideImg1 {
     position: absolute;
-    top: 45px;
+    top: 7%;
     right: 10%;
     width: 30%;
 }
 
 .aboutImgPart img.aboutSideImg2 {
     position: absolute;
-    top: 170px;
+    top: 25%;
     right: 15%;
     width: 27%;
 }
@@ -45,8 +45,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
-    width: 70px;
+    height: 30%;
+    width: 20%;
     border-radius: 50%;
 }
 
@@ -145,7 +145,7 @@
     font-family: light;
     font-size: 90%;
     color: var(--LightTextColor);
-    line-height: 25px;
+    line-height: 200%;
     margin: 30px 0px;
 }
 
@@ -172,7 +172,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 10px 25px;
+    padding: 0px 25px;
 }
 
 .aboutDate h6{
@@ -184,4 +184,52 @@
     font-size: 85%;
     font-family: light;
     color: var(--LightTextColor);
+}
+
+
+@media only screen and (max-width: 950px) {
+    .aboutContantPart {
+        font-size: 13px;
+    }
+    
+    .aboutContantPart button.CusBtn a {
+        font-size: 13px;
+    }
+    .aboutVideoPlay svg {
+        font-size: 180%;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .aboutContantPart {
+        font-size: 11px;
+    }
+    
+    .aboutContantPart button.CusBtn a {
+        font-size: 8.5px;
+        padding: 15px 10px;
+        gap: 0px;
+    }
+
+    .aboutContantPart button.CusBtn a span{
+        gap: 5px;
+    }
+
+    .aboutContantPart .aboutDate{
+        padding: 0px 0px 0px 10px;
+        gap: 2px;
+    }
+
+    .aboutImgPart img.aboutSideImg2{
+        width: 22%;
+        top: 22%;
+    }
+    .aboutVideoPlay svg {
+        font-size: 140%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
 }

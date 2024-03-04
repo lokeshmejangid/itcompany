@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "img": "./image/agencySectionImg/consulting.webp",
+        "text": "consulting"
+    },
+    {
+        "id": 2,
+        "img": "./image/agencySectionImg/software.webp",
+        "text": "software"
+    },
+    {
+        "id": 1,
+        "img": "./image/agencySectionImg/dataServices.webp",
+        "text": "Data Services"
+    },
+    {
+        "id": 1,
+        "img": "./image/agencySectionImg/cyberSecurity.webp",
+        "text": "Cyber Security"
+    },
+    {
+        "id": 1,
+        "img": "./image/agencySectionImg/education.webp",
+        "text": "Education"
+    }
+]

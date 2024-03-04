@@ -1,0 +1,175 @@
+.agencySection{
+    background-color: rgba(5, 218, 195, 0.05);
+    padding: 100px 0px;
+    position: relative;
+}
+
+.agencySection img.leftBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28%;
+    z-index: -1;
+}
+
+.agencySection img.rightBg{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25%;
+    z-index: -1;
+}
+
+.agencySectionMiniHeading{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+}
+
+.agencySectionMainHeading{
+    width: 40%;
+    margin: 0px auto;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.agencyCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    background-color: var(--WhiteColor);
+    width: 80%;
+    padding-bottom: 80%;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px -5px var(--ShadowColor);
+    margin: 30px 0px;
+}
+
+.agencyCard::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: var(--LightThemeColor);
+    transition: 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.agencyCard:hover:before{
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+.agencyCard img{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.agencyCard p{
+    position: absolute;
+    top: 58%;
+    font-size: 120%;
+    font-weight: 900;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.downAgebcyCard{
+    top: 70px;
+}
+
+.agencyViewMore{
+    margin-top: 100px;
+    text-transform: uppercase;
+    font-size: 100%;
+    font-family: light;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.agencyViewMore span{
+    text-align: center;
+}
+
+.agencyViewMore a{
+    text-decoration: underline;
+    font-family: light;
+    color: var(--LightThemeColor);
+    display: flex;
+    align-items: center;    
+    gap: 5px;
+}
+
+.agencyViewMore a svg{
+    font-size: 120%;
+}
+
+@media only screen and (max-width: 1150px) {
+    .agencyCard{
+        font-size: 12px;
+        width: 90%;
+        padding-bottom: 90%;
+    }
+    .agencySectionMainHeading{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .agencySection{
+        font-size: 13px;
+    }
+    
+    .agencyCard{
+        font-size: 15px;
+        width: 60%;
+        padding-bottom: 60%;
+    }
+    
+    .agencySectionMainHeading{
+        width: 70%;
+    }
+    .agencyViewMore{
+        width: 80%;
+        margin-left: 10%;
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .agencySection{
+        font-size: 11px;
+    }
+    
+    .agencySectionMainHeading{
+        width: 80%;
+    }
+
+    .agencyCard{
+        font-size: 13px;
+        width: 90%;
+        padding-bottom: 90%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .agencyCard{
+        font-size: 11px;
+        width: 100%;
+        padding-bottom: 100%;
+    }
+}
