@@ -27,7 +27,7 @@ const AgencySection = () => {
                         </Grid>)}
             </Grid>
             <Grid item xs={12}>
-                <p className='agencyViewMore'><span>BRING THEM TOGETHER AND YOU OVERCOME THE ORDINARY.</span><Link to='/'>VIEW MORE SERVICE <AddCircleOutline /> </Link></p>
+                <p className='viewMore'><span>BRING THEM TOGETHER AND YOU OVERCOME THE ORDINARY.</span><Link to='/'>VIEW MORE SERVICE <AddCircleOutline /> </Link></p>
             </Grid>
         </Grid>
     )

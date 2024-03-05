@@ -1,0 +1,17 @@
+.serviceSection{
+    background-color: var(--DarkThemeColor);
+    color: var(--WhiteColor);
+    background-image: url(../../../public/image/ServiceSectionImg/lineBG.png);
+    padding: 100px 0px;
+}
+
+.serviceSection .mainHeading{
+    padding: 30px 0px 50px;
+}
+
+.serviceSection>div>div>p{
+    line-height: 200%;
+    font-family: light;
+    color: var(--LightTextColor);
+    font-weight: 900;
+}

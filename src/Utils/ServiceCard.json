@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "img": "./image/ServiceSectionImg/CardImg/icon-1.webp",
+        "h3": "It Server & Cyber Security",
+        "p": "Transmax is the world tr we uphold industry Customer Oriented",
+        "link": "/"
+    },
+    {
+        "id": 2,
+        "img": "./image/ServiceSectionImg/CardImg/icon-2.webp",
+        "h3": "Machine Learning And Ai",
+        "p": "Transmax is the world tr we uphold industry Customer Oriented",
+        "link": "/"
+    },
+    {
+        "id": 3,
+        "img": "./image/ServiceSectionImg/CardImg/icon-3.webp",
+        "h3": "It Server & Cyber Security",
+        "p": "Transmax is the world tr we uphold industry Customer Oriented",
+        "link": "/"
+    },
+    {
+        "id": 4,
+        "img": "./image/ServiceSectionImg/CardImg/icon-4.webp",
+        "h3": "Clouds Backup Services",
+        "p": "Transmax is the world tr we uphold industry Customer Oriented",
+        "link": "/"
+    }
+]
