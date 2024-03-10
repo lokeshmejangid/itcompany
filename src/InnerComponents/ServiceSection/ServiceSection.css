@@ -6,7 +6,7 @@
 }
 
 .serviceSection .mainHeading{
-    padding: 30px 0px 50px;
+    padding: 20px 0px;
 }
 
 .serviceSection>div>div>p{
@@ -14,4 +14,14 @@
     font-family: light;
     color: var(--LightTextColor);
     font-weight: 900;
+    padding: 30px 0px;
+}
+
+@media only screen and (max-width: 900px) {
+    .serviceSection{
+        font-size: 13px;
+    }
+    .serviceSection>div>div>p{
+        padding: 0px 0px 30px;
+    }
 }

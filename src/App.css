@@ -4,14 +4,7 @@
   font-size: 100%;
   font-family: light;
   letter-spacing: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   width: 100%;
-}
-
-.viewMore span{
   text-align: center;
 }
 
@@ -19,8 +12,6 @@
   text-decoration: underline;
   font-family: light;
   color: var(--LightThemeColor);
-  display: flex;
-  align-items: center;    
   gap: 5px;
 }
 
@@ -28,11 +19,12 @@
   font-size: 120%;
 }
 
-.viewMore>svg{
+.viewMore>svg,.viewMore>span>svg{
   font-size: 110%;
-  padding: 0px 15px;
+  padding: 0px 10px;
   box-sizing: content-box;
   color: var(--WhiteColor);
+  transform: translate(0px, 20%);
 }
 
 

@@ -13,8 +13,8 @@ const AgencySection = () => {
             <img className='leftBg' src="./image/agencySectionImg/leftBg.webp" alt="" />
             <img className='rightBg' src="./image/agencySectionImg/rightBg.webp" alt="" />
             <Grid item sm={12}>
-                <MiniHeading frist='feature' addClass="agencySectionMiniHeading" />
-                <MainHeading f='Best Digital' s='Technology' t='Agency For People' addClass="agencySectionMainHeading" />
+                <MiniHeading frist='feature' addClass="centerMiniHeading" />
+                <MainHeading f='Best Digital' s='Technology' t='Agency For People' addClass="centerMainHeading" />
             </Grid>
             <Grid item sm={12} container spacing={0} justifyContent='center'>
                 {

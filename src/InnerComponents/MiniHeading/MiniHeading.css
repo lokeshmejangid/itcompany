@@ -1,4 +1,4 @@
-    .miniHeading div{
+.miniHeading div{
     background-color: var(--LightThemeColor);
     clip-path: polygon(50% 83%, 64% 24%, 100% 0%, 64.4% 39%, 50% 100%, 34.1% 36%, 0% 0%, 34.4% 21%);
     width: 140px;
@@ -11,4 +11,10 @@
 
 .miniHeading p span{
     color: var(--LightThemeColor);
+}
+
+.centerMiniHeading{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
 }

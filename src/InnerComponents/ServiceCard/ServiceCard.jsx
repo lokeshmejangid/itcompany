@@ -7,7 +7,7 @@ import './ServiceCard.css'
 const ServiceCard = (props) => {
     const {img, h3, p, link} = props.val;
     return (
-        <Grid item sm={3}>
+        <Grid item xs={10} sm={6} md={3}>
             <div className={`serviceCard ${props.addClass || ""}`}>
                 <div><img src={img} alt="" /> </div>
                 <h3>{h3}</h3>

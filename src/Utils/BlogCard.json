@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "link": "/",
+        "img": "./image/BlogSectionImg/card1.webp",
+        "user": "JAMIL",
+        "date": "02 Apr 2023",
+        "cardDes": "Providing solutions for Industrial men, and restoration."
+    },
+    {
+        "id": 2,
+        "link": "/",
+        "img": "./image/BlogSectionImg/card2.webp",
+        "user": "RASALINA",
+        "date": "02 Apr 2023",
+        "cardDes": "Everything melancholy uncommonly but solicitude."
+    },
+    {
+        "id": 3,
+        "link": "/",
+        "img": "./image/BlogSectionImg/card3.webp",
+        "user": "HAMIM",
+        "date": "02 Apr 2023",
+        "cardDes": "Discovery incommode earnestly commanded mentions."
+    }
+]

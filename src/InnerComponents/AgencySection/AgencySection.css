@@ -1,10 +1,10 @@
-.agencySection{
+.agencySection {
     background-color: rgba(5, 218, 195, 0.05);
     padding: 100px 0px;
     position: relative;
 }
 
-.agencySection img.leftBg{
+.agencySection img.leftBg {
     position: absolute;
     top: 0;
     left: 0;
@@ -12,7 +12,7 @@
     z-index: -1;
 }
 
-.agencySection img.rightBg{
+.agencySection img.rightBg {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -20,20 +20,7 @@
     z-index: -1;
 }
 
-.agencySectionMiniHeading{
-    margin-left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
-}
-
-.agencySectionMainHeading{
-    width: 40%;
-    margin: 0px auto;
-    text-align: center;
-    padding: 10px 0px;
-}
-
-.agencyCard{
+.agencyCard {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +35,7 @@
     margin: 30px 0px;
 }
 
-.agencyCard::before{
+.agencyCard::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -63,19 +50,19 @@
     opacity: 0;
 }
 
-.agencyCard:hover:before{
+.agencyCard:hover:before {
     transform: translate(-50%, -50%) scale(1);
     visibility: visible;
     opacity: 1;
 }
 
-.agencyCard img{
+.agencyCard img {
     position: absolute;
     top: 40%;
     transform: translateY(-50%);
 }
 
-.agencyCard p{
+.agencyCard p {
     position: absolute;
     top: 58%;
     font-size: 120%;
@@ -84,47 +71,36 @@
     text-transform: capitalize;
 }
 
-.downAgebcyCard{
+.downAgebcyCard {
     top: 70px;
 }
 
 @media only screen and (max-width: 1150px) {
-    .agencyCard{
+    .agencyCard {
         font-size: 12px;
         width: 90%;
         padding-bottom: 90%;
     }
-    .agencySectionMainHeading{
-        width: 50%;
-    }
 }
 
 @media only screen and (max-width: 900px) {
-    .agencySection{
+    .agencySection {
         font-size: 13px;
     }
-    
-    .agencyCard{
+
+    .agencyCard {
         font-size: 15px;
         width: 60%;
         padding-bottom: 60%;
     }
-    
-    .agencySectionMainHeading{
-        width: 70%;
-    }
 }
 
 @media only screen and (max-width: 600px) {
-    .agencySection{
+    .agencySection {
         font-size: 11px;
     }
-    
-    .agencySectionMainHeading{
-        width: 80%;
-    }
 
-    .agencyCard{
+    .agencyCard {
         font-size: 13px;
         width: 90%;
         padding-bottom: 90%;
@@ -132,7 +108,7 @@
 }
 
 @media only screen and (max-width: 350px) {
-    .agencyCard{
+    .agencyCard {
         font-size: 11px;
         width: 100%;
         padding-bottom: 100%;
